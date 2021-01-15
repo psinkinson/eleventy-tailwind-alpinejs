@@ -1,8 +1,49 @@
+
 {% set title = 'About' %}
 {% extends "layout.njk" %}
 
 {% block body %}
   <main class="container py-8">
     <h1>This is the {{ title | lower }} page.</h1>
+
+    <h2>Our investors</h2>
+
+    <div class="md:flex justify-between">
+      <div class="py-12 px-14 bg-white rounded-xl shadow-md">
+        FLOREAT
+      </div>
+      <div class="py-12 px-14 max-w-sm bg-white rounded-xl shadow-md">
+        FLOREAT
+      </div>
+      <div class="py-12 px-14 max-w-sm bg-white rounded-xl shadow-md">
+        FLOREAT
+      </div>
+      <div class="py-12 px-14 max-w-sm bg-white rounded-xl shadow-md">
+        FLOREAT
+      </div>
+    </div>
+
+    <h2>Our team</h2>
+
+    <div class="grid grid-flow-col auto-cols-fr gap-6">
+      {% for member in team %}
+
+        <div class="py-14 px-14 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-12 border-primary border">
+          <img class="block mx-auto h-52 w-52 rounded-full" src="{{member.img}}" alt="{{member.name}}'s Face">
+          <div class="text-center space-y-8">
+            <div class="space-y-4">
+              <p class="text-lg text-black font-semibold">
+                {{member.name}}
+              </p>
+              <p class="text-gray-500 font-medium">
+                {{member.role}}
+              </p>
+            </div>
+          </div>
+        </div>
+
+      {% endfor %}
+    </div>
+
   </main>
 {% endblock %}

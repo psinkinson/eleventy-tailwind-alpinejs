@@ -1,16 +1,28 @@
-<nav class="bg-gray-100">
-  <div class="container py-4 space-x-2">
+<nav class="bg-secondary">
+  <div class="container py-5 space-x-4">
     <a
-      class="{{ 'font-black' if page.url == '/' }}"
+      class="m-r text-white  {{ 'font-black' if page.url == '/' }}"
       href="/"
     >
-      Home
+      Cloud Cycle
     </a>
     <a
-      class="{{ 'font-black' if page.url == '/about/' }}"
+      class="text-white {{ 'font-black' if page.url == '/product/' }}"
+      href="/product"
+    >
+      Product
+    </a>
+    <a
+      class="text-white {{ 'font-black' if page.url == '/about/' }}"
       href="/about"
     >
-      About
+      About us
+    </a>
+    <a
+      class="text-white {{ 'font-black' if page.url == '/careers/' }}"
+      href="/careers"
+    >
+      Careers
     </a>
 
   </div>

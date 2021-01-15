@@ -15,6 +15,14 @@ module.exports = (config) => {
   })
   config.setDataDeepMerge(true)
 
+  // Universal Shortcodes (Adds to Liquid, Nunjucks, Handlebars)
+  config.addShortcode("team", function(name, twitterUsername) {
+    return `<div class="user">
+    <div class="user_name">${name}</div>
+    <div class="user_twitter">@${twitterUsername}</div>
+    </div>`;
+  });
+
   return {
     dir: {
       input: 'src',

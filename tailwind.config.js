@@ -5,7 +5,30 @@ module.exports = {
       center: true,
       padding: '2rem',
     },
-    extend: {},
+    
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
+    extend: {
+      colors:{
+        primary: {
+          light: '#c0d5f6',
+          DEFAULT: '#2E73E2',
+          dark: '#1d56d6',
+        },
+        secondary: {
+          light: '#b6b6cc',
+          DEFAULT: '#0a0a54',
+          dark: '#05053a',
+        },
+        accent: {
+          light: '#bff2e7',
+          DEFAULT: '#2AD4AE',
+          dark: '#19c394',
+        }
+      }
+    }
   },
   variants: {
     extend: {},
